@@ -2,19 +2,21 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
-  'ngRoute'
+var AbcMobileApp = angular.module('AbcMobileApp', [
+  'ngRoute','ngAnimate'
  
 ]);
 
-phonecatApp.config(['$routeProvider',
-  function($routeProvider) {
+AbcMobileApp.config(['$routeProvider',
+  function($routeProvider ) {
     $routeProvider.
       when('/', {
-        templateUrl: 'partials/fertilizer_master.html',        
+        templateUrl: 'partials/fertilizer_master.html',
+			controller: 'AbcMobileCtrl'
       }).
-      when('/spraymanagement', {
-        templateUrl: 'partials/spray_management.html',
+      when('/spray_management', {
+        templateUrl: 'partials/spray_management.html'
        
       });
+	   
   }]);
