@@ -2,11 +2,17 @@ use strict';
 
 /* Controllers */
 
-var AbcMobileControllers = angular.module('AbcMobileApp', []);
+var AbcMobileApp= angular.module('AbcMobileApp', []);
 
-AbcMobileControllers.controller('AbcMobileCtrl', ['$scope', 'Slocation',
-  function($scope,$location) {
-   $scope.change_page=function(){
-   		$location.path('/spray_management');
-   }
-  }]);
+AbcMobileApp.controller('AbcMobileCtrl', ['$scope', 'Slocation','$locationProvider',
+    
+	function($locationProvider) {
+		$locationProvider.html5Mode(true);
+		$locationProvider.hashPrefix('!');
+	},
+	function($scope,$location) {
+		$scope.change_page=function(){ 
+   		$location.path('/spray_management').replace();			 
+		$scope.$apply();  
+	};
+   }]);
