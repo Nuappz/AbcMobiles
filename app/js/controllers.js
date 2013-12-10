@@ -1,18 +1,16 @@
-use strict';
+'use strict';
 
 /* Controllers */
 
-var AbcMobileApp= angular.module('AbcMobileApp', []);
+var AbcMobileController= angular.module('AbcMobileController', []);
 
-AbcMobileApp.controller('AbcMobileCtrl', ['$scope', 'Slocation','$locationProvider',
+AbcMobileController.controller('AbcMobileCtrl', ['$scope', 'Slocation','$rootScope',
     
-	function($locationProvider) {
-		$locationProvider.html5Mode(true);
-		$locationProvider.hashPrefix('!');
-	},
-	function($scope,$location) {
-		$scope.change_page=function(){ 
-   		$location.path('/spray_management').replace();			 
-		$scope.$apply();  
+	
+	function($scope,$location,$rootScope) {
+		$scope.change_page=function(){ 	
+   		
+			$location.path('/spray_management');
+		
 	};
    }]);

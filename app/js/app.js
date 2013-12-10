@@ -3,8 +3,7 @@
 /* App Module */
 
 var AbcMobileApp = angular.module('AbcMobileApp', [
-  'ngRoute','ngAnimate'
- 
+  'ngRoute','AbcMobileController' 
 ]);
 
 AbcMobileApp.config(['$routeProvider',
