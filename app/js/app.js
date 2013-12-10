@@ -11,7 +11,7 @@ AbcMobileApp.config(['$routeProvider',
     $routeProvider.
       when('/', {
         templateUrl: 'partials/fertilizer_master.html',
-			controller: 'AbcMobileCtrl'
+		controller: 'AbcMobileCtrl'
       }).
       when('/spray_management', {
         templateUrl: 'partials/spray_management.html'

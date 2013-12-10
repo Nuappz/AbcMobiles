@@ -1,17 +1,17 @@
-<header class="bar-title" >
+<header class="bar-title" ng-controller="AbcMobileCtrl">
    <h1 class="title">Fertilizer Master</h1>
   </header>
   <form role="form">
     <div class="form-group">
    <label for="FertilizerName">Fertilizer Name</label>
-   <input type="text" class="form-control" id="FertilizerName" placeholder="Fertilizer Name">
+   <input type="text" class="form-control" id="FertilizerName" ng-model="fertilizer.name" placeholder="Fertilizer Name">
     </div>
     <div class="form-group">
    <label for="FertilizerType">Fertilizer Type</label>
-   <input type="text" class="form-control" id="FertilizerType" placeholder="Fertilizer Type">
+   <input type="text" class="form-control" id="FertilizerType" ng-model="fertilizer.type" placeholder="Fertilizer Type">
     </div>
-    <div class="btn" ng-controller="AbcMobileCtrl">
-     <button type="submit" class="btn btn-primary" ng-click="change_page()">Save</button>
+    <div class="btn">
+     <button ng-click="change_page()" type="submit" class="btn btn-primary" >Save</button>
      <button type="submit" class="btn btn-default">Cancel</button>
     </div>
   </form>
